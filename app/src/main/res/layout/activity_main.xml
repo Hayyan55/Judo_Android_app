@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/m_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="0dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:includeFontPadding="false"
+        android:minHeight="32dp"
+        android:text="@string/moves_list"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/m_addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center"
+        android:layout_margin="@dimen/fab_margin"
+        android:contentDescription="@string/description"
+        app:srcCompat="@drawable/ic_action_add_24dp" />
+
+    <ListView
+        android:id="@+id/m_listview"
+        android:layout_width="match_parent"
+        android:layout_height="655dp" >
+    </ListView>
+
+</LinearLayout>
