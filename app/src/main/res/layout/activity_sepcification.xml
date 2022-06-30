@@ -10,26 +10,26 @@
     android:backgroundTintMode="src_over"
     tools:context=".Specification">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_add_place"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_700"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:theme="@style/CustomToolbarStyle"/>
+
     <androidx.cardview.widget.CardView
-        android:layout_width="314dp"
-        android:layout_height="256dp"
+        android:id="@+id/cardView"
+        android:layout_width="312dp"
+        android:layout_height="140dp"
         android:layout_marginTop="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints">
-
-        <ImageView
-            android:id="@+id/s_image"
-            android:layout_width="wrap_content"
-            android:layout_height="210dp"
-            android:layout_gravity="bottom"
-            android:src="@drawable/background"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="85dp"
-            tools:layout_editor_absoluteY="152dp"
-            android:contentDescription="@string/judo_stuff" />
 
         <TextView
             android:id="@+id/s_name"
@@ -42,6 +42,15 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
+            tools:ignore="MissingConstraints" />
+
+        <TextView
+            android:id="@+id/s_description"
+            android:layout_width="match_parent"
+            android:layout_height="93dp"
+            android:layout_gravity="bottom"
+            android:textSize="20sp"
+            android:contentDescription="@string/judo_stuff"
             tools:ignore="MissingConstraints" />
 
     </androidx.cardview.widget.CardView>

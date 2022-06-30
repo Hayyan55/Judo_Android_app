@@ -2,8 +2,8 @@ package com.example.ikpmd
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageView
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 
 class Specification : AppCompatActivity() {
 
@@ -11,13 +11,19 @@ class Specification : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sepcification)
 
+        val toolbar = findViewById<Toolbar>(R.id.toolbar_add_place)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
+
         val name = findViewById<TextView>(R.id.s_name)
-        val image = findViewById<ImageView>(R.id.s_image)
-        val inComingText = intent.getStringExtra(Constants.name_waza)
-        val inComingImage = intent.getIntExtra(Constants.pic_waza, 0)
+        val description = findViewById<TextView>(R.id.s_description)
+        val inComingName = intent.getStringExtra(Constants.name_waza)
+        val inComingDescription = intent.getStringExtra(Constants.des_waza)
 
-        name.text = inComingText
-        image.setImageResource(inComingImage)
-
+        name.text = inComingName
+        description.text = inComingDescription
     }
 }
