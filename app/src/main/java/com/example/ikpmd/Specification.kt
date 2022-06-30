@@ -11,7 +11,7 @@ class Specification : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sepcification)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar_add_place)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar_add_waza)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {

@@ -10,7 +10,6 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.widget.Toolbar
-import java.io.IOException
 
 class AddNewWaza : AppCompatActivity(), View.OnClickListener {
 
@@ -19,7 +18,7 @@ class AddNewWaza : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_new_waza)
 
-        val toolbar = findViewById<Toolbar>(R.id.toolbar_add_place)
+        val toolbar = findViewById<Toolbar>(R.id.toolbar_add_waza)
         setSupportActionBar(toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         toolbar.setNavigationOnClickListener {

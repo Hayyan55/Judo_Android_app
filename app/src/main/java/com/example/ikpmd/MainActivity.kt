@@ -46,13 +46,12 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra(Constants.des_waza, this.itemDes)
             startActivityForResult(intent, ADD_WAZA_REQUEST_CODE)
         }
-//        getWazaListFromLocalDb()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        // check if the request code is same as what is passed  here it is 'ADD_PLACE_ACTIVITY_REQUEST_CODE'
+        // check if the request code is same as what is passed  here it is 'ADD_WAZA_REQUEST_CODE'
         if (requestCode == ADD_WAZA_REQUEST_CODE) {
             if (resultCode == Activity.RESULT_OK) {
                 getWazaListFromLocalDb()
@@ -64,12 +63,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun getWazaNames(): ArrayList<String> {
         getWazaListFromLocalDb()
-//        for (waza in Constants.getMoves()) {
-//            Log.e("Title", waza.waza_name)
-//            Log.e("des", waza.description)
-//            val itemName = waza.waza_name
-//            namesList.add(itemName)
-//        }
         return namesList
     }
 
